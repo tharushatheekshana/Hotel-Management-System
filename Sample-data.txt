@@ -1,0 +1,75 @@
+Admin account 
+username: admin
+password: password
+
+
+
+
+INSERT INTO usercredential
+VALUES 
+	('admin', 'password'),
+	('tharusha', '1234');
+
+
+INSERT INTO rooms (RoomNo, CustName, RoomPackage, RoomType, Status)
+VALUES
+  (101, 'John Doe', 'Full Board', 'Single', 'Not Booked'),
+  (102, 'Jane Smith', 'Half Board', 'Double', 'Not Booked'),
+  (103, 'Bob Johnson', 'Bed and Breakfast', 'Triple', 'Not Booked'),
+  (104, 'Alice Brown', 'Full Board', 'Quad', 'Not Booked'),
+  (105, 'Charlie Davis', 'Bed and Breakfast', 'Queen', 'Not Booked'),
+  (106, 'Eva White', 'Half Board', 'King', 'Not Booked'),
+  (107, 'Frank Miller', 'Full Board', 'Twin', 'Not Booked'),
+  (108, 'Grace Turner', 'Bed and Breakfast', 'Hollywood Twin', 'Not Booked'),
+  (109, 'Henry Brown', 'Half Board', 'Double-Double', 'Not Booked'),
+  (110, 'Isabel Lee', 'Full Board', 'Studio', 'Not Booked'),
+  (111, 'Jack Johnson', 'Bed and Breakfast', 'Standard', 'Not Booked'),
+  (112, 'Kathy Wilson', 'Half Board', 'Deluxe', 'Not Booked'),
+  (113, 'Liam Johnson', 'Full Board', 'Joint', 'Not Booked'),
+  (114, 'Mia Anderson', 'Bed and Breakfast', 'Connecting', 'Not Booked'),
+  (115, 'Noah Smith', 'Half Board', 'Suite', 'Not Booked'),
+  (116, 'Olivia Davis', 'Full Board', 'Standard', 'Not Booked'),
+  (117, 'Patrick White', 'Bed and Breakfast', 'Apartment-Style', 'Not Booked'),
+  (118, 'Quinn Wilson', 'Half Board', 'Accessible', 'Not Booked'),
+  (119, 'Riley Turner', 'Full Board', 'Cabana', 'Not Booked'),
+  (120, 'Samuel Brown', 'Bed and Breakfast', 'Villa', 'Not Booked'),
+  (121, 'Taylor Johnson', 'Full Board', 'Single', 'Not Booked'),
+  (122, 'Ursula White', 'Half Board', 'Double', 'Not Booked'),
+  (123, 'Victor Turner', 'Bed and Breakfast', 'Triple', 'Not Booked'),
+  (124, 'Wendy Miller', 'Full Board', 'Quad', 'Not Booked'),
+  (125, 'Xavier Davis', 'Bed and Breakfast', 'Queen', 'Not Booked'),
+  (126, 'Yasmine Brown', 'Half Board', 'King', 'Not Booked'),
+  (127, 'Zachary Smith', 'Full Board', 'Twin', 'Not Booked'),
+  (128, 'Abigail Wilson', 'Bed and Breakfast', 'Hollywood Twin', 'Not Booked'),
+  (129, 'Benjamin Turner', 'Half Board', 'Double-Double', 'Not Booked'),
+  (130, 'Catherine Anderson', 'Full Board', 'Studio', 'Not Booked'),
+  (131, 'Daniel Lee', 'Bed and Breakfast', 'Standard', 'Not Booked'),
+  (132, 'Emma Johnson', 'Half Board', 'Deluxe', 'Not Booked'),
+  (133, 'Finnegan Turner', 'Full Board', 'Joint', 'Not Booked'),
+  (134, 'Gabriella Davis', 'Bed and Breakfast', 'Connecting', 'Not Booked'),
+  (135, 'Harvey White', 'Half Board', 'Suite', 'Not Booked'),
+  (136, 'Isabella Turner', 'Full Board', 'Standard', 'Not Booked'),
+  (137, 'Jackson Brown', 'Bed and Breakfast', 'Apartment-Style', 'Not Booked'),
+  (138, 'Kylie Smith', 'Half Board', 'Accessible', 'Not Booked'),
+  (139, 'Landon Miller', 'Full Board', 'Cabana', 'Not Booked'),
+  (140, 'Makayla Johnson', 'Bed and Breakfast', 'Villa', 'Not Booked'),
+  (141, 'Nathan Turner', 'Full Board', 'Single', 'Not Booked'),
+  (142, 'Olivia Brown', 'Half Board', 'Double', 'Not Booked'),
+  (143, 'Peter Miller', 'Bed and Breakfast', 'Triple', 'Not Booked'),
+  (144, 'Quincy White', 'Full Board', 'Quad', 'Not Booked'),
+  (145, 'Rachel Davis', 'Bed and Breakfast', 'Queen', 'Not Booked'),
+  (146, 'Samuel Turner', 'Half Board', 'King', 'Not Booked'),
+  (147, 'Taylor Smith', 'Full Board', 'Twin', 'Not Booked'),
+  (148, 'Ursula Anderson', 'Bed and Breakfast', 'Hollywood Twin', 'Not Booked'),
+  (149, 'Victor Lee', 'Half Board', 'Double-Double', 'Not Booked'),
+  (150, 'Wendy Johnson', 'Full Board', 'Studio', 'Not Booked'),
+  (151, 'Xavier Miller', 'Bed and Breakfast', 'Standard', 'Not Booked'),
+  (152, 'Yasmine White', 'Half Board', 'Deluxe', 'Not Booked'),
+  (153, 'Zachary Turner', 'Full Board', 'Joint', 'Not Booked'),
+  (154, 'Abigail Davis', 'Bed and Breakfast', 'Connecting', 'Not Booked'),
+  (155, 'Benjamin Smith', 'Half Board', 'Suite', 'Not Booked'),
+  (156, 'Catherine Turner', 'Full Board', 'Standard', 'Not Booked'),
+  (157, 'Daniel Brown', 'Bed and Breakfast', 'Apartment-Style', 'Not Booked'),
+  (158, 'Emma Miller', 'Half Board', 'Accessible', 'Not Booked'),
+  (159, 'Finnegan White', 'Full Board', 'Cabana', 'Not Booked'),
+  (160, 'Gabriella Turner', 'Bed and Breakfast', 'Villa', 'Not Booked');    
