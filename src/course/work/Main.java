@@ -6,7 +6,7 @@ package course.work;
 
 import course.work.view.CheckInView;
 import course.work.view.CheckOutView;
-import course.work.view.HomeView;
+import course.work.view.AdminHomeView;
 import course.work.view.LoginView;
 import course.work.view.ManageRoomView;
 
@@ -16,13 +16,13 @@ import course.work.view.ManageRoomView;
  */
 public class Main {
 
-  /**
-   * @param args the command line arguments
-   */
-  public static void main(String[] args) {
-    // new CheckInView().setVisible(true);
-    new HomeView().setVisible(true);
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // new CheckInView().setVisible(true);
+        new LoginView().setVisible(true);
 
-  }
+    }
 
 }

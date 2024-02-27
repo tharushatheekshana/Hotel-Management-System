@@ -24,8 +24,5 @@ public class UserAccountDto {
     private String name;
     private Integer phone;
     private String email;
-    private String address;
-    private String city;
     private String nationality;
-    private Integer id;
 }

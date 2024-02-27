@@ -78,20 +78,14 @@ public class SignUpView extends javax.swing.JFrame {
         lblName = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
         lblPhone = new javax.swing.JLabel();
-        txtAddress = new javax.swing.JTextField();
         lblEmail = new javax.swing.JLabel();
-        txtCity = new javax.swing.JTextField();
-        lblAddress = new javax.swing.JLabel();
         txtNationality = new javax.swing.JTextField();
-        lblCity = new javax.swing.JLabel();
         txtIDNo = new javax.swing.JTextField();
         lblNationlity = new javax.swing.JLabel();
-        lblIDNo = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         lblName1 = new javax.swing.JLabel();
         txtName1 = new javax.swing.JTextField();
         lblIDNo1 = new javax.swing.JLabel();
-        txtId = new javax.swing.JTextField();
         lblIDNo2 = new javax.swing.JLabel();
         txtIDNo1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -119,18 +113,8 @@ public class SignUpView extends javax.swing.JFrame {
         lblEmail.setForeground(new java.awt.Color(0, 0, 0));
         lblEmail.setText("Email : ");
 
-        lblAddress.setForeground(new java.awt.Color(0, 0, 0));
-        lblAddress.setText("Address : ");
-
-        lblCity.setForeground(new java.awt.Color(0, 0, 0));
-        lblCity.setText("City : ");
-
         lblNationlity.setForeground(new java.awt.Color(0, 0, 0));
         lblNationlity.setText("Nationality :");
-
-        lblIDNo.setBackground(new java.awt.Color(153, 153, 153));
-        lblIDNo.setForeground(new java.awt.Color(0, 0, 0));
-        lblIDNo.setText("ID No :");
 
         lblName1.setForeground(new java.awt.Color(0, 0, 0));
         lblName1.setText("Username :");
@@ -160,11 +144,8 @@ public class SignUpView extends javax.swing.JFrame {
                     .addComponent(lblName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblPhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblNationlity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblName1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblIDNo, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblIDNo2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                     .addComponent(lblIDNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -172,12 +153,9 @@ public class SignUpView extends javax.swing.JFrame {
                     .addComponent(txtName)
                     .addComponent(txtPhone)
                     .addComponent(txtEmail)
-                    .addComponent(txtAddress)
-                    .addComponent(txtCity)
                     .addComponent(txtNationality)
                     .addComponent(txtIDNo, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
                     .addComponent(txtName1)
-                    .addComponent(txtId)
                     .addComponent(txtIDNo1))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
@@ -206,21 +184,9 @@ public class SignUpView extends javax.swing.JFrame {
                     .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNationlity, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNationality, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblIDNo, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(120, 120, 120)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblIDNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtIDNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -228,7 +194,7 @@ public class SignUpView extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblIDNo2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtIDNo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(16, 16, 16))
         );
@@ -305,7 +271,7 @@ public class SignUpView extends javax.swing.JFrame {
     }// GEN-LAST:event_btnCheckInActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnBackActionPerformed
-        new HomeView().setVisible(true);
+        new AdminHomeView().setVisible(true);
         this.dispose();
     }// GEN-LAST:event_btnBackActionPerformed
 
@@ -382,10 +348,7 @@ public class SignUpView extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem3;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JLabel lblAddress;
-    private javax.swing.JLabel lblCity;
     private javax.swing.JLabel lblEmail;
-    private javax.swing.JLabel lblIDNo;
     private javax.swing.JLabel lblIDNo1;
     private javax.swing.JLabel lblIDNo2;
     private javax.swing.JLabel lblName;
@@ -394,12 +357,9 @@ public class SignUpView extends javax.swing.JFrame {
     private javax.swing.JLabel lblPhone;
     private com.raven.swing.TimePicker timePicker1;
     private com.raven.swing.TimePicker timePicker2;
-    private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtIDNo;
     private javax.swing.JTextField txtIDNo1;
-    private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtName1;
     private javax.swing.JTextField txtNationality;
@@ -411,7 +371,7 @@ public class SignUpView extends javax.swing.JFrame {
         try {
             Session session = sessionFactoryConfiguration.getSession();
             UserAccountDto dto = new UserAccountDto(txtName.getText(), Integer.parseInt(txtPhone.getText()),
-                    txtEmail.getText(), txtAddress.getText(), txtCity.getText(), txtNationality.getText(), Integer.parseInt(txtId.getText()));
+                    txtEmail.getText(), txtNationality.getText());
 
             String resp = userAccountController.saveCustomer(dto);
             JOptionPane.showMessageDialog(this, resp);

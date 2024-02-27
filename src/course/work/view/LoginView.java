@@ -212,19 +212,23 @@ public class LoginView extends javax.swing.JFrame {
 
     private void searchCustomer() {
         String username = txtUsername.getText();
-
         char[] passwordChars = txtPassword.getPassword();
         String password = new String(passwordChars);
-
+    
         Session session = sessionFactoryConfiguration.getSession();
-
+    
         UserCredentialEntity userCredentialEntity = session.get(UserCredentialEntity.class, username);
-        String pw = userCredentialEntity.getPassword();
+    
         if (userCredentialEntity != null) {
-            if (password.equals(pw)) {
+            String pw = userCredentialEntity.getPassword();
+    
+            if (!username.equals("admin") && password.equals(pw)) {
                 System.out.println("Login Successful");
-                new HomeView().setVisible(true);
+                new CustomerHomeView().setVisible(true);
                 this.dispose();
+            } else if (username.equals("admin") && password.equals(pw)) {
+                System.out.println("Login Successful for Admin");
+                new AdminHomeView().setVisible(true);
             } else {
                 System.out.println("Wrong Password");
             }
@@ -232,5 +236,6 @@ public class LoginView extends javax.swing.JFrame {
             System.out.println("Wrong Username");
         }
     }
+    
 
 }

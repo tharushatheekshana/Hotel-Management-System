@@ -85,11 +85,8 @@
                       <Component id="lblName" max="32767" attributes="0"/>
                       <Component id="lblPhone" max="32767" attributes="0"/>
                       <Component id="lblEmail" max="32767" attributes="0"/>
-                      <Component id="lblAddress" max="32767" attributes="0"/>
-                      <Component id="lblCity" max="32767" attributes="0"/>
                       <Component id="lblNationlity" max="32767" attributes="0"/>
                       <Component id="lblName1" max="32767" attributes="0"/>
-                      <Component id="lblIDNo" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
                       <Component id="lblIDNo2" pref="115" max="32767" attributes="0"/>
                       <Component id="lblIDNo1" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
                   </Group>
@@ -98,12 +95,9 @@
                       <Component id="txtName" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtPhone" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtEmail" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtAddress" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtCity" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtNationality" max="32767" attributes="0"/>
                       <Component id="txtIDNo" alignment="0" pref="219" max="32767" attributes="0"/>
                       <Component id="txtName1" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtId" max="32767" attributes="0"/>
                       <Component id="txtIDNo1" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -140,25 +134,10 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblAddress" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="txtAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblCity" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="txtCity" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblNationlity" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="txtNationality" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblIDNo" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="txtId" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblIDNo1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="txtIDNo" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -168,7 +147,7 @@
                       <Component id="lblIDNo2" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                       <Component id="txtIDNo1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="38" max="32767" attributes="0"/>
+                  <EmptySpace pref="47" max="32767" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               </Group>
@@ -196,8 +175,6 @@
             <Property name="text" type="java.lang.String" value="Phone : "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtAddress">
-        </Component>
         <Component class="javax.swing.JLabel" name="lblEmail">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -206,25 +183,7 @@
             <Property name="text" type="java.lang.String" value="Email : "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtCity">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblAddress">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Address : "/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="txtNationality">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblCity">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="City : "/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtIDNo">
         </Component>
@@ -234,17 +193,6 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nationality :"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblIDNo">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="99" red="99" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="ID No :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtName">
@@ -269,8 +217,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Enter Password :"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtId">
         </Component>
         <Component class="javax.swing.JLabel" name="lblIDNo2">
           <Properties>

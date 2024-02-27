@@ -627,7 +627,7 @@ public class CheckOutView extends javax.swing.JFrame {
         }// GEN-LAST:event_jButton4ActionPerformed
 
         private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnBackActionPerformed
-                new HomeView().setVisible(true);
+                new AdminHomeView().setVisible(true);
                 this.dispose();
         }// GEN-LAST:event_btnBackActionPerformed
 

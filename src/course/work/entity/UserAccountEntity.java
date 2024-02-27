@@ -35,16 +35,7 @@ public class UserAccountEntity {
     @Column(name = "Email")
     private String email;
 
-    @Column(name = "Address")
-    private String address;
-
-    @Column(name = "City")
-    private String city;
-
     @Column(name = "Nationality")
     private String nationality;
-
-    @Column(name = "ID")
-    private Integer id;
 
 }

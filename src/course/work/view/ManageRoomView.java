@@ -418,7 +418,7 @@ public class ManageRoomView extends javax.swing.JFrame {
     }// GEN-LAST:event_btnRoomActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnBackActionPerformed
-        new HomeView().setVisible(true);
+        new AdminHomeView().setVisible(true);
         this.dispose();
     }// GEN-LAST:event_btnBackActionPerformed
 
