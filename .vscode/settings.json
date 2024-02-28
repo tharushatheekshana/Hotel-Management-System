@@ -22,7 +22,8 @@
         "src/course/work/lib/required/stax-ex-1.8.jar",
         "src/course/work/lib/required/txw2-2.3.1.jar",
         "src/course/work/lib/swing-time-picker.jar",
-        "src/course/work/lib/TimingFramework-0.55.jar"
+        "src/course/work/lib/TimingFramework-0.55.jar",
+        "src/course/work/lib/AbsoluteLayout.jar"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }

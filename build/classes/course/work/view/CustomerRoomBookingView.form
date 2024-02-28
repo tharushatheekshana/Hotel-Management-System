@@ -637,12 +637,26 @@
                 <Component class="javax.swing.JComboBox" name="boxRoomType">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="5">
+                      <StringArray count="19">
                         <StringItem index="0" value="Single"/>
-                        <StringItem index="1" value="Twin"/>
-                        <StringItem index="2" value="Double"/>
-                        <StringItem index="3" value="Triple"/>
-                        <StringItem index="4" value="Quad"/>
+                        <StringItem index="1" value="Double"/>
+                        <StringItem index="2" value="Triple"/>
+                        <StringItem index="3" value="Quad"/>
+                        <StringItem index="4" value="Queen"/>
+                        <StringItem index="5" value="King"/>
+                        <StringItem index="6" value="Twin"/>
+                        <StringItem index="7" value="Hollywood Twin"/>
+                        <StringItem index="8" value="Double-Double"/>
+                        <StringItem index="9" value="Studio"/>
+                        <StringItem index="10" value="Standard"/>
+                        <StringItem index="11" value="Deluxe"/>
+                        <StringItem index="12" value="Joint"/>
+                        <StringItem index="13" value="Connecting"/>
+                        <StringItem index="14" value="Suite"/>
+                        <StringItem index="15" value="Apartment-Style"/>
+                        <StringItem index="16" value="Accessible"/>
+                        <StringItem index="17" value="Cabana"/>
+                        <StringItem index="18" value="Villa"/>
                       </StringArray>
                     </Property>
                   </Properties>
