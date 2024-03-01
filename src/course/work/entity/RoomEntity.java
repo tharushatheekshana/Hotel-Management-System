@@ -23,19 +23,19 @@ import lombok.ToString;
 public class RoomEntity {
 
     @Id
-    @Column(name = "RoomNo")
+    @Column(name = "RoomNo", nullable = false)
     private Integer roomNo;
 
     @Column(name = "CustName")
     private String custName;
 
-    @Column(name = "RoomType")
+    @Column(name = "RoomType", nullable = false)
     private String roomType;
 
     @Column(name = "RoomPackage")
     private String roomPackage;
 
-    @Column(name = "Status", nullable = true)
+    @Column(name = "Status")
     private String status;
 
 }

@@ -64,7 +64,7 @@ public class ReservationServiceImpl implements ReservationService {
                             customerDto.getEmail(),
                             customerDto.getAddress(), customerDto.getCity(), customerDto.getNationality(),
                             customerDto.getIdNo(), customerDto.getCustomerPackage(), customerDto.getCheckInDate(),
-                            customerDto.getCheckOutDate());
+                            customerDto.getCheckOutDate(),customerDto.getCheckInTime(),customerDto.getCheckOutTime());
 
                     if (session.save(customerEntity) == null) {
                         isCustomerSaved = false;

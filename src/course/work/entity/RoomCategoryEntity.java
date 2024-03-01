@@ -23,16 +23,16 @@ import javax.persistence.Table;
 public class RoomCategoryEntity {
 
     @Id
-    @Column(name = "CategoryID")
+    @Column(name = "CategoryID", nullable = false)
     private String categoryId;
 
-    @Column(name = "CategoryName")
+    @Column(name = "CategoryName", nullable = false)
     private String categoryName;
 
-    @Column(name = "CategoryDescription")
+    @Column(name = "CategoryDescription", nullable = false)
     private String categoryDescription;
 
-    @Column(name = "Price")
+    @Column(name = "Price", nullable = false)
     private Double price;
 
 }

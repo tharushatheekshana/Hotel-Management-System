@@ -123,7 +123,7 @@ public class CustomerServiceImpl implements CustomerService {
                 return new CustomerDto(entity.getRoom(), entity.getName(), entity.getPhone(),
                         entity.getEmail(), entity.getAddress(), entity.getCity(),
                         entity.getNationality(), entity.getIdNo(), entity.getCustomerPackage(), entity.getCheckInDate(),
-                        entity.getCheckOutDate());
+                        entity.getCheckOutDate(),entity.getCheckInTime(),entity.getCheckOutTime());
             }
             return null;
         } finally {
@@ -144,7 +144,7 @@ public class CustomerServiceImpl implements CustomerService {
                 customerDtos.add(new CustomerDto(entity.getRoom(), entity.getName(), entity.getPhone(),
                         entity.getEmail(), entity.getAddress(), entity.getCity(),
                         entity.getNationality(), entity.getIdNo(), entity.getCustomerPackage(), entity.getCheckInDate(),
-                        entity.getCheckOutDate()));
+                        entity.getCheckOutDate(),entity.getCheckInTime(),entity.getCheckOutTime()));
             }
             return customerDtos;
         } finally {

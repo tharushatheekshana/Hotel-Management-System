@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.time.LocalTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,34 +29,40 @@ public class CustomerEntity {
     @Column(name = "Room", nullable = false)
     private Integer room;
 
-    @Column(name = "Name")
+    @Column(name = "Name", nullable = false)
     private String name;
 
-    @Column(name = "Phone")
+    @Column(name = "Phone", nullable = false)
     private Integer phone;
 
-    @Column(name = "Email")
+    @Column(name = "Email", nullable = false)
     private String email;
 
-    @Column(name = "Address")
+    @Column(name = "Address", nullable = false)
     private String address;
 
-    @Column(name = "City")
+    @Column(name = "City", nullable = false)
     private String city;
 
-    @Column(name = "Nationality")
+    @Column(name = "Nationality", nullable = false)
     private String nationality;
 
-    @Column(name = "ID")
+    @Column(name = "ID", nullable = false)
     private Integer idNo;
 
-    @Column(name = "Package")
+    @Column(name = "Package", nullable = false)
     private String customerPackage;
 
-    @Column(name = "CheckInDate")
+    @Column(name = "CheckInDate", nullable = false)
     private java.sql.Date checkInDate;
 
-    @Column(name = "CheckOutDate")
+    @Column(name = "CheckOutDate", nullable = false)
     private java.sql.Date checkOutDate;
+
+    @Column(name = "CheckInTime", nullable = false)
+    private LocalTime checkInTime;
+
+    @Column(name = "CheckOutTime", nullable = false)
+    private LocalTime checkOutTime;
 
 }

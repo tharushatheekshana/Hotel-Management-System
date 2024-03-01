@@ -34,13 +34,13 @@ public class ReservationEntity {
     @Column(name = "ReservationId")
     private Integer id;
 
-    @Column(name = "Room")
+    @Column(name = "Room", nullable = false)
     private Integer room;
 
-    @Column(name = "Date")
+    @Column(name = "Date", nullable = false)
     private String date;
 
-    @Column(name = "Price")
+    @Column(name = "Price", nullable = false)
     private Double price;
 
 

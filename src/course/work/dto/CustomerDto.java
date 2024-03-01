@@ -5,6 +5,8 @@
 package course.work.dto;
 
 import java.sql.Date;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -35,5 +37,7 @@ public class CustomerDto {
     private String customerPackage;
     private java.sql.Date checkInDate;
     private java.sql.Date checkOutDate;
+    private LocalTime checkInTime;
+    private LocalTime checkOutTime;
 
 }

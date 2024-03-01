@@ -409,7 +409,6 @@ public class SignUpView extends javax.swing.JFrame {
         //     Session session = sessionFactoryConfiguration.getSession();
         //     UserAccountDto dto = new UserAccountDto(txtName.getText(), Integer.parseInt(txtPhone.getText()),
         //             txtEmail.getText(), txtNationality.getText());
-
         //     String resp = userAccountController.saveCustomer(dto);
         //     JOptionPane.showMessageDialog(this, resp);
         // } catch (Exception ex) {
