@@ -1042,7 +1042,7 @@ public class CustomerRoomBookingView extends javax.swing.JFrame {
         private void reservation() {
 
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                ReservationDto dto = new ReservationDto(Integer.parseInt(txtReservationId.getText()),
+                ReservationDto dto = new ReservationDto(
                                 Integer.parseInt(txtRoom.getText()),
                                 sdf.format(new Date()), Double.parseDouble(txtPrice.getText()), customerDtos, roomDtos);
 

@@ -450,9 +450,7 @@
                   <Component id="lblPrice" min="-2" pref="88" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Component id="txtPrice" min="-2" pref="119" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="txtReservationId" min="-2" pref="75" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                  <EmptySpace min="66" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -471,10 +469,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="lblPrice" min="-2" pref="26" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtReservationId" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="txtPrice" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -766,11 +761,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPrice">
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtReservationId">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtReservationIdActionPerformed"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>

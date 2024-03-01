@@ -51,8 +51,10 @@ public class ReservationServiceImpl implements ReservationService {
 
             // }
 
-            ReservationEntity reservationEntity = new ReservationEntity(dto.getId(), dto.getRoom(), dto.getDate(),
-                    dto.getPrice());
+            ReservationEntity reservationEntity = new ReservationEntity();
+            reservationEntity.setRoom(dto.getRoom());
+            reservationEntity.setDate(dto.getDate());
+            reservationEntity.setPrice(dto.getPrice());
 
             if (session.save(reservationEntity) != null) {
 
@@ -64,7 +66,7 @@ public class ReservationServiceImpl implements ReservationService {
                             customerDto.getEmail(),
                             customerDto.getAddress(), customerDto.getCity(), customerDto.getNationality(),
                             customerDto.getIdNo(), customerDto.getCustomerPackage(), customerDto.getCheckInDate(),
-                            customerDto.getCheckOutDate(),customerDto.getCheckInTime(),customerDto.getCheckOutTime());
+                            customerDto.getCheckOutDate(), customerDto.getCheckInTime(), customerDto.getCheckOutTime());
 
                     if (session.save(customerEntity) == null) {
                         isCustomerSaved = false;

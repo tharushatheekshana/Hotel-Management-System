@@ -63,6 +63,7 @@ public class CheckInView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -121,7 +122,6 @@ public class CheckInView extends javax.swing.JFrame {
         btnCheckInTime = new javax.swing.JButton();
         lblPrice = new javax.swing.JLabel();
         txtPrice = new javax.swing.JTextField();
-        txtReservationId = new javax.swing.JTextField();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -590,12 +590,6 @@ public class CheckInView extends javax.swing.JFrame {
         lblPrice.setForeground(new java.awt.Color(0, 0, 0));
         lblPrice.setText("Price :");
 
-        txtReservationId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtReservationIdActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -627,11 +621,7 @@ public class CheckInView extends javax.swing.JFrame {
                                 .addGap(27, 27, 27)
                                 .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 119,
                                         javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtReservationId, javax.swing.GroupLayout.PREFERRED_SIZE, 75,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(66, 66, 66)));
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel7Layout.setVerticalGroup(
                 jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
@@ -651,17 +641,9 @@ public class CheckInView extends javax.swing.JFrame {
                                                         .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                         .addComponent(lblPrice, javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGroup(jPanel7Layout
-                                                                .createParallelGroup(
-                                                                        javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                .addComponent(txtPrice,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(txtReservationId,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addGroup(jPanel7Layout
                                                         .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING,
@@ -903,7 +885,6 @@ public class CheckInView extends javax.swing.JFrame {
     private javax.swing.JTextField txtNationality;
     private javax.swing.JTextField txtPhone;
     private javax.swing.JTextField txtPrice;
-    private javax.swing.JTextField txtReservationId;
     private javax.swing.JTextField txtRoom;
     private javax.swing.JTextField txtRoomPackage;
     private javax.swing.JTextField txtRoomType;
@@ -912,7 +893,7 @@ public class CheckInView extends javax.swing.JFrame {
     private void reservation() {
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        ReservationDto dto = new ReservationDto(Integer.parseInt(txtReservationId.getText()),
+        ReservationDto dto = new ReservationDto(
                 Integer.parseInt(txtRoom.getText()),
                 sdf.format(new Date()), Double.parseDouble(txtPrice.getText()), customerDtos, roomDtos);
 
@@ -927,9 +908,9 @@ public class CheckInView extends javax.swing.JFrame {
 
             String SelectCheckInTime = timePicker1.getSelectedTime();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm a");
-            LocalTime CheckInTime = LocalTime.parse(SelectCheckInTime,formatter);
+            LocalTime CheckInTime = LocalTime.parse(SelectCheckInTime, formatter);
             String SelectCheckOutTime = timePicker2.getSelectedTime();
-            LocalTime CheckOutTime = LocalTime.parse(SelectCheckOutTime,formatter);
+            LocalTime CheckOutTime = LocalTime.parse(SelectCheckOutTime, formatter);
 
             java.sql.Date CheckInDate = new java.sql.Date(selectedDate1.getTime());
             java.sql.Date CheckOutDate = new java.sql.Date(selectedDate2.getTime());
