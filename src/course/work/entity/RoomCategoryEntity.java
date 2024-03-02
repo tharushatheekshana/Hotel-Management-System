@@ -22,10 +22,9 @@ import javax.persistence.Table;
 @ToString
 public class RoomCategoryEntity {
 
+    // @Column(name = "CategoryID", nullable = false)
+    // private String categoryId;
     @Id
-    @Column(name = "CategoryID", nullable = false)
-    private String categoryId;
-
     @Column(name = "CategoryName", nullable = false)
     private String categoryName;
 

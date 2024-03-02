@@ -470,7 +470,7 @@ public class RoomCategoriesView extends javax.swing.JFrame {
 
         private void loadTable() {
                 try {
-                        String[] columns = { "Category ID", "Room Category", "Room Description", "Price" };
+                        String[] columns = {/*  "Category ID",  */"Room Category", "Room Description", "Price" };
 
                         DefaultTableModel dtm = new DefaultTableModel(columns, 0) {
 
@@ -486,8 +486,8 @@ public class RoomCategoriesView extends javax.swing.JFrame {
                         List<RoomCategoryDto> roomCategoryList = roomCategoryController.getAll();
 
                         for (RoomCategoryDto roomCategoryDto : roomCategoryList) {
-                                Object[] rowData = { roomCategoryDto.getCategoryID(),
-                                                roomCategoryDto.getCategoryName(),
+                                Object[] rowData = {/*  roomCategoryDto.getCategoryID(),
+                                                 */roomCategoryDto.getCategoryName(),
                                                 roomCategoryDto.getCategoryDescription(),
                                                 roomCategoryDto.getPrice() };
                                 dtm.addRow(rowData);
@@ -505,7 +505,7 @@ public class RoomCategoriesView extends javax.swing.JFrame {
                         RoomCategoryDto category = roomCategoryController.getCategory(id);
 
                         if (category != null) {
-                                txtCategoryId.setText(category.getCategoryID());
+                               /*  txtCategoryId.setText(category.getCategoryID()); */
                                 txtCategoryName.setText(category.getCategoryName());
                                 txtCategoryDescription.setText(category.getCategoryDescription());
                                 txtCategoryPrice.setText(Double.toString(category.getPrice()));
@@ -519,8 +519,8 @@ public class RoomCategoriesView extends javax.swing.JFrame {
 
         private void categoryUpdate() {
                 try {
-                        RoomCategoryDto dto = new RoomCategoryDto(txtCategoryId.getText(),
-                                        txtCategoryName.getText(),
+                        RoomCategoryDto dto = new RoomCategoryDto(/* txtCategoryId.getText(),
+                                         */txtCategoryName.getText(),
                                         txtCategoryDescription.getText(),
                                         Double.parseDouble(txtCategoryPrice.getText()));
 
@@ -536,8 +536,8 @@ public class RoomCategoriesView extends javax.swing.JFrame {
 
         private void saveCategory() {
                 try {
-                        RoomCategoryDto dto = new RoomCategoryDto(txtCategoryId.getText(),
-                                        txtCategoryName.getText(),
+                        RoomCategoryDto dto = new RoomCategoryDto(/* txtCategoryId.getText(),
+                                         */txtCategoryName.getText(),
                                         txtCategoryDescription.getText(),
                                         Double.parseDouble(txtCategoryPrice.getText()));
 

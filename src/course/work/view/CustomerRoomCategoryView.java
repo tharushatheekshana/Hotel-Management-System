@@ -391,7 +391,7 @@ public class CustomerRoomCategoryView extends javax.swing.JFrame {
 
     private void loadTable() {
         try {
-            String[] columns = {"Category ID", "Room Category", "Room Description", "Price"};
+            String[] columns = {/* "Category ID",  */"Room Category", "Room Description", "Price"};
 
             DefaultTableModel dtm = new DefaultTableModel(columns, 0) {
 
@@ -407,8 +407,8 @@ public class CustomerRoomCategoryView extends javax.swing.JFrame {
             List<RoomCategoryDto> roomCategoryList = roomCategoryController.getAll();
 
             for (RoomCategoryDto roomCategoryDto : roomCategoryList) {
-                Object[] rowData = {roomCategoryDto.getCategoryID(),
-                    roomCategoryDto.getCategoryName(),
+                Object[] rowData = {/* roomCategoryDto.getCategoryID(),
+                     */roomCategoryDto.getCategoryName(),
                     roomCategoryDto.getCategoryDescription(),
                     roomCategoryDto.getPrice()};
                 dtm.addRow(rowData);
@@ -426,7 +426,7 @@ public class CustomerRoomCategoryView extends javax.swing.JFrame {
             RoomCategoryDto category = roomCategoryController.getCategory(id);
 
             if (category != null) {
-                txtCategoryId.setText(category.getCategoryID());
+              /*   txtCategoryId.setText(category.getCategoryID()); */
                 txtCategoryName.setText(category.getCategoryName());
                 txtCategoryDescription.setText(category.getCategoryDescription());
                 txtCategoryPrice.setText(Double.toString(category.getPrice()));

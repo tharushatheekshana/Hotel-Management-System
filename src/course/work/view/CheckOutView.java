@@ -229,6 +229,24 @@ public class CheckOutView extends javax.swing.JFrame {
 
         jLabel11.setText("Check Out Date - ");
 
+        txtName.setEditable(false);
+
+        txtCity.setEditable(false);
+
+        txtIDNo.setEditable(false);
+
+        txtPhone.setEditable(false);
+
+        txtAddress.setEditable(false);
+
+        txtCheckInDate.setEditable(false);
+
+        txtEmail.setEditable(false);
+
+        txtNationality.setEditable(false);
+
+        txtCheckOutDate.setEditable(false);
+
         jButton1.setText("CHECK OUT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,7 +256,11 @@ public class CheckOutView extends javax.swing.JFrame {
 
         jLabel12.setText("Check In Time - ");
 
+        jTextField11.setEditable(false);
+
         jLabel13.setText("Check Out  Time -");
+
+        jTextField12.setEditable(false);
 
         btnSearch.setText("Search");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {

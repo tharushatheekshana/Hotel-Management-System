@@ -42,24 +42,7 @@ public class ReservationServiceImpl implements ReservationService {
         Transaction transaction = session.beginTransaction();
 
         try {
-            // ReservationRepository repository = new ReservationRepositoryImpl();
-            // ReservationEntity reservationEntity = new ReservationEntity();
-            // reservationEntity.setId(dto.getId());
-            // reservationEntity.setRoom(dto.getRoom());
-            // reservationEntity.setDate(dto.getDate());
-            // reservationEntity.setPrice(dto.getPrice());
-            // boolean isReservationSaved =
-            // ReservationRepository.save(reservationEntity,session);
-
-            // if(isReservationSaved){
-            // ReservationEntity reservationEntity2=
-            // ReservationRepository.get(ReservationDto.getRoom(),session);
-            // CustomerEntity customerEntity = new CustomerEntity();
-            // customerEntity.setRoom(dto.getRoom());
-            // customerEntity.setName(dto.get);
-
-            // }
-
+           
             ReservationEntity reservationEntity = new ReservationEntity();
             reservationEntity.setRoom(dto.getRoom());
             reservationEntity.setDate(dto.getDate());

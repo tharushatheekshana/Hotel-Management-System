@@ -22,7 +22,7 @@ import lombok.ToString;
 @ToString
 public class RoomCategoryDto {
 
-    private String categoryID;
+   // private String categoryID;
     private String categoryName;
     private String categoryDescription;
     private double price;

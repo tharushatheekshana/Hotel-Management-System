@@ -1,19 +1,14 @@
-Admin account 
-username: admin
+Admin account username: admin 
 password: password
 
 
-
-
 INSERT INTO usercredential
-VALUES 
-	('admin', 'password'),
-	('tharusha', '1234');
+VALUES ('admin', 'password'),
+  ('tharusha', '1234');
 
 
 INSERT INTO rooms (RoomNo, CustName, RoomPackage, RoomType, Status)
-VALUES
-  (101, '', '', 'Single', 'Not Booked'),
+VALUES (101, '', '', 'Single', 'Not Booked'),
   (102, '', '', 'Double', 'Not Booked'),
   (103, '', '', 'Triple', 'Not Booked'),
   (104, '', '', 'Quad', 'Not Booked'),
@@ -73,4 +68,27 @@ VALUES
   (158, '', '', 'Accessible', 'Not Booked'),
   (159, '', '', 'Cabana', 'Not Booked'),
   (160, '', '', 'Villa', 'Not Booked');
-   
+
+
+  INSERT INTO roomcategory (CategoryDescription, CategoryName, Price)
+VALUES
+  ('Assigned to one person or a couple. Bed size varies.', 'Single', 1000),
+  ('Assigned to two people with one double or two twin beds.', 'Double', 2000),
+  ('Equipped for three people with various bed combinations.', 'Triple', 3000),
+  ('Set up for four people with two double beds or bunk beds.', 'Quad', 4000),
+  ('Queen room with a queen-sized bed.', 'Queen', 1000),
+  ('King room with a king-sized bed.', 'King', 1000),
+  ('Twin room with two twin-sized beds.', 'Twin', 2000),
+  ('Hollywood twin room with two twin beds joined by the same headboard.', 'Hollywood Twin', 2000),
+  ('Two double beds (or two queen beds) for 2-4 people.', 'Double Double', 3000),
+  ('Studio room with a studio bed or additional beds. May have a kitchenette.', 'Studio', 4000),
+  ('Same as a queen or single room, great for solo or couple travelers.', 'Standard', 5000),
+  ('Slightly bigger with upgraded amenities or a nicer view.', 'Deluxe', 6000),
+  ('Two rooms with a common wall but no connecting door.', 'Joint', 5000),
+  ('Rooms with a connecting door for families or groups.', 'Connecting', 7000),
+  ('Various sizes including basic, mini, and presidential suites.', 'Suite', 5000),
+  ('Rooms with full kitchens and amenities for long stays.', 'Apartment Style', 6000),
+  ('Handicapped-accessible rooms with wheelchair space.', 'Accessible', 5000),
+  ('Rooms opening onto the swimming pool or with a private pool.', 'Cabana', 8000),
+  ('Stand-alone houses with extra space, multiple bedrooms, and amenities.', 'Villa', 9000),
+  ('Exclusive top-floor penthouse suites with luxury amenities.', 'Penthouse', 10000);

@@ -26,7 +26,7 @@ public class RoomCategoryServiceImpl implements RoomCategoryService {
                     .createQuery("from RoomCategoryEntity", RoomCategoryEntity.class).list();
             List<RoomCategoryDto> roomCategoryDtos = new ArrayList<>();
             for (RoomCategoryEntity entity : roomCategoryEntities) {
-                roomCategoryDtos.add(new RoomCategoryDto(entity.getCategoryId(), entity.getCategoryName(),
+                roomCategoryDtos.add(new RoomCategoryDto(entity.getCategoryName(),
                         entity.getCategoryDescription(),
                         entity.getPrice()));
             }
@@ -43,7 +43,7 @@ public class RoomCategoryServiceImpl implements RoomCategoryService {
         try {
             RoomCategoryEntity entity = session.get(RoomCategoryEntity.class, id);
             if (entity != null) {
-                return new RoomCategoryDto(entity.getCategoryId(), entity.getCategoryName(),
+                return new RoomCategoryDto(entity.getCategoryName(),
                         entity.getCategoryDescription(),
                         entity.getPrice());
             }
@@ -59,12 +59,12 @@ public class RoomCategoryServiceImpl implements RoomCategoryService {
         Session session = sessionFactoryConfiguration.getSession();
         try {
 
-            RoomCategoryEntity existingEntity = session.get(RoomCategoryEntity.class, dto.getCategoryID());
+            RoomCategoryEntity existingEntity = session.get(RoomCategoryEntity.class, dto.getCategoryName());
             if (existingEntity != null) {
                 return "Already exists. Cannot save duplicate entry.";
             }
 
-            RoomCategoryEntity entity = new RoomCategoryEntity(dto.getCategoryID(), dto.getCategoryName(),
+            RoomCategoryEntity entity = new RoomCategoryEntity(dto.getCategoryName(),
                     dto.getCategoryDescription(),
                     dto.getPrice());
             session.save(entity);
@@ -79,7 +79,7 @@ public class RoomCategoryServiceImpl implements RoomCategoryService {
     public String updateCategory(RoomCategoryDto dto) throws Exception {
         Session session = sessionFactoryConfiguration.getSession();
         try {
-            RoomCategoryEntity entity = session.get(RoomCategoryEntity.class, dto.getCategoryID());
+            RoomCategoryEntity entity = session.get(RoomCategoryEntity.class, dto.getCategoryName());
             if (entity != null) {
                 entity.setCategoryName(dto.getCategoryName());
                 entity.setCategoryDescription(dto.getCategoryDescription());
