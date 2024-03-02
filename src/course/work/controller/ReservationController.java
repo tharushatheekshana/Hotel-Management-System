@@ -19,7 +19,11 @@ public class ReservationController {
             .getService(ServiceFactory.ServiceType.RESERVATION);
 
     public String reservation(ReservationDto dto) throws Exception {
-        return reservationService.reservation(dto);
+        return reservationService.saveReservation(dto);
+    }
+
+    public String deleteReservation(Integer ID) throws Exception {
+        return reservationService.deleteReservation(ID);
     }
 
 }

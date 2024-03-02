@@ -112,6 +112,11 @@ public class AdminHomeView extends javax.swing.JFrame {
         btnCancel.setForeground(new java.awt.Color(0, 0, 0));
         btnCancel.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\icons8-cancel-50.png")); // NOI18N
         btnCancel.setText("CANCEL BOOKING");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
         jPanel2.add(btnCancel);
         btnCancel.setBounds(280, 220, 225, 121);
 
@@ -164,6 +169,11 @@ public class AdminHomeView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        new CancelBookingView().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnCheckInActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnCheckInActionPerformed
         new CheckInView().setVisible(true);

@@ -29,8 +29,8 @@ public class RoomController {
         return roomService.getRoom(id);
     }
 
-    public String deleteRoom(Integer roomNo) throws Exception {
-        return roomService.deleteRoom(roomNo);
+    public String deleteRoom(Integer id) throws Exception {
+        return roomService.deleteRoom(id);
     }
 
     public String updateRoom(RoomDto dto) throws Exception {

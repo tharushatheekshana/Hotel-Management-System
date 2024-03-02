@@ -79,6 +79,11 @@ public class CustomerHomeView extends javax.swing.JFrame {
         btnCancel.setForeground(new java.awt.Color(0, 0, 0));
         btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-cancel-50.png"))); // NOI18N
         btnCancel.setText("CANCEL BOOKING");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
         jPanel2.add(btnCancel);
         btnCancel.setBounds(554, 123, 225, 125);
 
@@ -127,6 +132,11 @@ public class CustomerHomeView extends javax.swing.JFrame {
         new CustomerRoomBookingView().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnRoomsActionPerformed
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+         new CancelBookingView().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnCancelActionPerformed
 
     /**
      * @param args the command line arguments

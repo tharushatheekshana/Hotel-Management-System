@@ -23,7 +23,6 @@ import lombok.ToString;
 @ToString
 public class ReservationDto {
 
-   // private Integer id;
     private Integer room;
     private String date;
     private Double price;

@@ -148,6 +148,11 @@ public class CheckOutView extends javax.swing.JFrame {
         });
 
         jButton6.setText("CANCEL");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setText("CUSTOMER MANAGE");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -397,6 +402,11 @@ public class CheckOutView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+         new CancelBookingView().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton6ActionPerformed
+
         private void btnCheckInActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnCheckInActionPerformed
                 new CheckInView().setVisible(true);
                 this.dispose();
@@ -536,20 +546,10 @@ public class CheckOutView extends javax.swing.JFrame {
                                 txtNationality.setText(customer.getNationality());
                                 txtIDNo.setText(Integer.toString(customer.getIdNo()));
 
-                                // if (customer.getCheckInDate() != null) {
                                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
                                 txtCheckInDate.setText(dateFormat.format(customer.getCheckInDate()));
-                                // } else {
-                                // txtCheckInDate.setText("");
-                                // }
-                                //
-                                // // Format and set CheckOutDate
-                                // if (customer.getCheckOutDate() != null) {
-                                // SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
                                 txtCheckOutDate.setText(dateFormat.format(customer.getCheckOutDate()));
-                                // } else {
-                                // txtCheckOutDate.setText("");
-                                // }
+                               
 
                         } else {
                                 JOptionPane.showMessageDialog(this, "Customer Not Found");
@@ -575,14 +575,12 @@ public class CheckOutView extends javax.swing.JFrame {
                                         roomEntity.setCustName("");
                                         roomEntity.setRoomPackage("");
                                         roomEntity.setStatus("Not Booked");
-
                                         transaction.commit();
 
                                 } else {
                                         JOptionPane.showMessageDialog(this, "Room not found with ID: " + id);
                                 }
                         } catch (Exception ex) {
-                                // Roll back the transaction if an exception occurs
                                 if (transaction != null) {
                                         transaction.rollback();
                                 }
@@ -590,7 +588,6 @@ public class CheckOutView extends javax.swing.JFrame {
                                 Logger.getLogger(ManageRoomView.class.getName()).log(Level.SEVERE, null, ex);
                                 JOptionPane.showMessageDialog(this, ex.getMessage());
                         } finally {
-                                // Close the Hibernate session
                                 session.close();
                         }
 

@@ -13,6 +13,8 @@ import course.work.service.SuperService;
  */
 public interface ReservationService extends SuperService {
 
-    String reservation(ReservationDto dto) throws Exception;
+    String saveReservation(ReservationDto dto) throws Exception;
+
+    String deleteReservation(Integer ID) throws Exception;
 
 }

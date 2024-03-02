@@ -25,11 +25,11 @@ public class CustomerController {
         return customerService.updateCustomer(customerDto);
     }
      */
-    public String deleteCustomer(int id) throws Exception {
+    public String deleteCustomer(Integer id) throws Exception {
         return customerService.deleteCustomer(id);
     }
 
-    public CustomerDto getCustomer(int id) throws Exception {
+    public CustomerDto getCustomer(Integer id) throws Exception {
         return customerService.getCustomer(id);
     }
 

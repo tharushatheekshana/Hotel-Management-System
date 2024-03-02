@@ -20,30 +20,32 @@ import util.SessionFactoryConfiguration;
 public class ReservationRepositoryImpl implements ReservationRepository {
 
     @Override
-    public boolean save(ReservationEntity t,Session session) throws Exception {
+    public boolean save(ReservationEntity t, Session session) throws Exception {
         Integer id = (Integer) session.save(t);
         return true;
 
     }
 
     @Override
-    public boolean update(ReservationEntity t,Session session) throws Exception {
+    public boolean update(ReservationEntity t, Session session) throws Exception {
         session.update(t);
         return true;
     }
 
     @Override
-    public boolean delete(Integer id,Session session) throws Exception {
-        ReservationEntity reservationEntity = session.get(ReservationEntity.class, id);
+    public boolean delete(Integer ID, Session session) throws Exception {
+        ReservationEntity reservationEntity = session.get(ReservationEntity.class, ID);
+
         if (reservationEntity != null) {
-            session.delete(id);
+            session.delete(reservationEntity);
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
     @Override
-    public ReservationEntity get(Integer id,Session session) throws Exception {
+    public ReservationEntity get(Integer id, Session session) throws Exception {
         ReservationEntity reservationEntity = session.get(ReservationEntity.class, id);
         return reservationEntity;
     }
