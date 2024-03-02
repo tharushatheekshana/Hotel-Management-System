@@ -1015,6 +1015,7 @@ public class CheckInView extends javax.swing.JFrame {
 
             String resp = reservationController.reservation(dto);
             JOptionPane.showMessageDialog(this, resp);
+            clear();
         } catch (Exception ex) {
             Logger.getLogger(CheckInView.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, ex.getMessage());
@@ -1075,6 +1076,22 @@ public class CheckInView extends javax.swing.JFrame {
         double lastPrice = hoursDifference / 24.0 * price;
 
         txtPrice.setText(String.valueOf(lastPrice));
+    }
+
+    public void clear() {
+        txtRoom.setText("");
+        txtName.setText("");
+        txtPhone.setText("");
+        txtEmail.setText("");
+        txtAddress.setText("");
+        txtCity.setText("");
+        txtNationality.setText("");
+        txtIDNo.setText("");
+        txtRoomPackage.setText("");
+        CheckInDate = null;
+        CheckOutDate = null;
+        txtCheckInTime.setText("");
+        txtCheckOutTime.setText("");
     }
 
 }

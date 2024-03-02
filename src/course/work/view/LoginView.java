@@ -6,7 +6,7 @@ package course.work.view;
 
 import course.work.controller.CustomerController;
 import course.work.dto.CustomerDto;
-import course.work.entity.UserCredentialEntity;
+import course.work.entity.UserAccountEntity;
 import java.awt.event.MouseEvent;
 
 import java.util.logging.Level;
@@ -232,14 +232,14 @@ public class LoginView extends javax.swing.JFrame {
 
         Session session = sessionFactoryConfiguration.getSession();
 
-        UserCredentialEntity userCredentialEntity = session.get(UserCredentialEntity.class, username);
+        UserAccountEntity userAccountEntity = session.get(UserAccountEntity.class, username);
 
-        if (userCredentialEntity != null) {
-            String pw = userCredentialEntity.getPassword();
+        if (userAccountEntity != null) {
+            String pw = userAccountEntity.getPassword();
 
             if (!username.equals("admin") && password.equals(pw)) {
                 System.out.println("Login Successful");
-                new CustomerHomeView().setVisible(true);
+                new CustomerHomeView(username).setVisible(true);
                 this.dispose();
             } else if (username.equals("admin") && password.equals(pw)) {
                 System.out.println("Login Successful for Admin");

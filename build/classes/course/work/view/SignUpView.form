@@ -102,9 +102,9 @@
                                       <Component id="txtPhone" alignment="0" max="32767" attributes="0"/>
                                       <Component id="txtEmail" alignment="0" max="32767" attributes="0"/>
                                       <Component id="txtNationality" max="32767" attributes="0"/>
-                                      <Component id="txtIDNo" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtName1" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtIDNo1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtPassword" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtUsername" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtRePassword" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -132,7 +132,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblName1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="txtName1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtUsername" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -152,12 +152,12 @@
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblIDNo1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="txtIDNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblIDNo2" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="txtIDNo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtRePassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -200,7 +200,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtNationality">
         </Component>
-        <Component class="javax.swing.JTextField" name="txtIDNo">
+        <Component class="javax.swing.JTextField" name="txtPassword">
         </Component>
         <Component class="javax.swing.JLabel" name="lblNationlity">
           <Properties>
@@ -220,7 +220,7 @@
             <Property name="text" type="java.lang.String" value="Username :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtName1">
+        <Component class="javax.swing.JTextField" name="txtUsername">
         </Component>
         <Component class="javax.swing.JLabel" name="lblIDNo1">
           <Properties>
@@ -244,7 +244,7 @@
             <Property name="text" type="java.lang.String" value="Re Enter Password :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtIDNo1">
+        <Component class="javax.swing.JTextField" name="txtRePassword">
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
@@ -292,7 +292,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="382" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">

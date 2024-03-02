@@ -14,4 +14,6 @@ import course.work.service.SuperService;
 public interface UserAccountService extends SuperService {
 
     String saveCustomer(UserAccountDto dto) throws Exception;
+
+    UserAccountDto getCustomer(String id) throws Exception;
 }

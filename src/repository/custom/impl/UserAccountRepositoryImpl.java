@@ -19,7 +19,8 @@ public class UserAccountRepositoryImpl implements UserAccountRepository {
 
     @Override
     public boolean save(UserAccountEntity t, Session session) throws Exception {
-        return false;
+        session.save(t);
+        return true;
     }
 
     @Override
@@ -34,7 +35,8 @@ public class UserAccountRepositoryImpl implements UserAccountRepository {
 
     @Override
     public UserAccountEntity get(String id, Session session) throws Exception {
-        return null;
+        UserAccountEntity entity = session.get(UserAccountEntity.class, id);
+        return entity;
     }
 
     @Override

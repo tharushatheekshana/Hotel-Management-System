@@ -7,6 +7,8 @@ package course.work.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +20,7 @@ import lombok.ToString;
  * @author ASUS
  */
 @Entity
+@Table(name = "useraccounts")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -25,17 +28,23 @@ import lombok.ToString;
 @ToString
 public class UserAccountEntity {
 
-    @Column(name = "Name")
+    @Id
+    @Column(name = "username", nullable = false)
+    private String username;
+
+    @Column(name = "password", nullable = false)
+    private String password;
+
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Id
-    @Column(name = "Phone")
+    @Column(name = "phone", nullable = false)
     private Integer phone;
 
-    @Column(name = "Email")
+    @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name = "Nationality")
-    private String nationality;
+    @Column(name = "country", nullable = false)
+    private String country;
 
 }

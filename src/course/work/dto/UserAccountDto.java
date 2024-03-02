@@ -21,8 +21,10 @@ import lombok.ToString;
 @ToString
 public class UserAccountDto {
 
+    private String username;
+    private String password;
     private String name;
     private Integer phone;
     private String email;
-    private String nationality;
+    private String country;
 }

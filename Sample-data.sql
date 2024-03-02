@@ -1,10 +1,12 @@
-Admin account username: admin 
+Admin username: admin 
 password: password
 
 
-INSERT INTO usercredential
-VALUES ('admin', 'password'),
-  ('tharusha', '1234');
+INSERT INTO useraccounts (username, country, email, name, password, phone)
+VALUES 
+  ('admin', 'Adminland', 'admin@example.com', 'Hotel', 'password', 123456789),
+  ('tharusha', 'Sri Lanka', 'tharusha@example.com', 'Tharusha', '1234', 123456789);
+
 
 
 INSERT INTO rooms (RoomNo, CustName, RoomPackage, RoomType, Status)

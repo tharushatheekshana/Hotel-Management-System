@@ -402,7 +402,7 @@ public class CustomerRoomCategoryView extends javax.swing.JFrame {
             };
 
             tblCategory.setModel(dtm);
-            tblCategory.getColumnModel().getColumn(2).setPreferredWidth(500);
+            tblCategory.getColumnModel().getColumn(1).setPreferredWidth(500);
 
             List<RoomCategoryDto> roomCategoryList = roomCategoryController.getAll();
 

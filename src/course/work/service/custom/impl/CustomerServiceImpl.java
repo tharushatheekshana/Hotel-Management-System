@@ -25,33 +25,9 @@ import util.SessionFactoryConfiguration;
  */
 public class CustomerServiceImpl implements CustomerService {
 
-    // private CustomerRepository customerRepository = (CustomerRepository)
-    // Factory.getInstance().getDao(DaoFactory.DaoType.CUSTOMER);
     private CustomerRepository customerRepository = (CustomerRepository) RepositoryFactory.getInstance()
             .getRepository(RepositoryFactory.RepositoryType.CUSTOMER);
 
-    // private SessionFactoryConfiguration sessionFactoryConfiguration =
-    // SessionFactoryConfiguration.getInstance();
-    // @Override
-    // public String addCustomer(CustomerDto dto) throws Exception {
-    // Session session = sessionFactoryConfiguration.getSession();
-    // Transaction transaction = session.beginTransaction();
-    // try {
-    // CustomerEntity customerEntity = new CustomerEntity(dto.getRoom(),
-    // dto.getName(), dto.getPhone(),
-    // dto.getEmail(), dto.getAddress(), dto.getCity(), dto.getNationality(),
-    // dto.getIdNo(), dto.getCustomerPackage(), dto.getCheckInDate(),
-    // dto.getCheckOutDate());
-    // session.save(customerEntity);
-    // transaction.commit();
-    // return "Successfully Saved";
-    // } catch (Exception e) {
-    // transaction.rollback();
-    // throw e; // Rethrow the exception for proper handling
-    // } finally {
-    // session.close();
-    // }
-    // }
     @Override
     public String addCustomer(CustomerDto dto) throws Exception {
         Session session = SessionFactoryConfiguration.getInstance().getSession();
@@ -123,7 +99,7 @@ public class CustomerServiceImpl implements CustomerService {
                 return new CustomerDto(entity.getRoom(), entity.getName(), entity.getPhone(),
                         entity.getEmail(), entity.getAddress(), entity.getCity(),
                         entity.getNationality(), entity.getIdNo(), entity.getCustomerPackage(), entity.getCheckInDate(),
-                        entity.getCheckOutDate(),entity.getCheckInTime(),entity.getCheckOutTime());
+                        entity.getCheckOutDate(), entity.getCheckInTime(), entity.getCheckOutTime());
             }
             return null;
         } finally {
@@ -144,7 +120,7 @@ public class CustomerServiceImpl implements CustomerService {
                 customerDtos.add(new CustomerDto(entity.getRoom(), entity.getName(), entity.getPhone(),
                         entity.getEmail(), entity.getAddress(), entity.getCity(),
                         entity.getNationality(), entity.getIdNo(), entity.getCustomerPackage(), entity.getCheckInDate(),
-                        entity.getCheckOutDate(),entity.getCheckInTime(),entity.getCheckOutTime()));
+                        entity.getCheckOutDate(), entity.getCheckInTime(), entity.getCheckOutTime()));
             }
             return customerDtos;
         } finally {
