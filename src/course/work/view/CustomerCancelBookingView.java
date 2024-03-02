@@ -12,6 +12,7 @@ import course.work.dto.ReservationDto;
 import course.work.dto.RoomDto;
 import course.work.entity.ReservationEntity;
 import course.work.entity.RoomEntity;
+import java.awt.event.ActionEvent;
 import util.SessionFactoryConfiguration;
 
 import java.text.ParseException;
@@ -31,24 +32,31 @@ import org.hibernate.Session;
  *
  * @author ASUS
  */
-public class CancelBookingView extends javax.swing.JFrame {
+public class CustomerCancelBookingView extends javax.swing.JFrame {
 
     private RoomController roomController;
     private CustomerController customerController;
     private ReservationController reservationController;
     private SessionFactoryConfiguration sessionFactoryConfiguration = SessionFactoryConfiguration.getInstance();
+    private String username;
 
     private List<RoomDto> roomDtos = new ArrayList<>();
 
     /**
      * Creates new form CheckOutView
      */
-    public CancelBookingView() {
+    public CustomerCancelBookingView() {
         customerController = new CustomerController();
         roomController = new RoomController();
         reservationController = new ReservationController();
         initComponents();
         setLocationRelativeTo(null);
+    }
+
+    public CustomerCancelBookingView(String username) {
+        this();
+        this.username = username;
+
     }
 
     /**
@@ -62,18 +70,16 @@ public class CancelBookingView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        btnCheckIn = new javax.swing.JButton();
-        btnCheckOut = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        btnRoom = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        btnRoomBooking = new javax.swing.JButton();
+        btnRoomsCategory = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -130,45 +136,24 @@ public class CancelBookingView extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 102));
 
-        btnCheckIn.setText("CHECK IN");
-        btnCheckIn.addActionListener(new java.awt.event.ActionListener() {
+        btnRoomBooking.setText("ROOM BOOKING");
+        btnRoomBooking.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCheckInActionPerformed(evt);
+                btnRoomBookingActionPerformed(evt);
             }
         });
 
-        btnCheckOut.setText("CHECK OUT");
-        btnCheckOut.addActionListener(new java.awt.event.ActionListener() {
+        btnRoomsCategory.setText("ROOMS CATEGORY");
+        btnRoomsCategory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCheckOutActionPerformed(evt);
+                btnRoomsCategoryActionPerformed(evt);
             }
         });
 
-        jButton4.setText("ROOM CATEGORIES");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnCancel.setText("CANCEL");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        btnRoom.setText("ROOMS");
-        btnRoom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRoomActionPerformed(evt);
-            }
-        });
-
-        jButton6.setText("CANCEL");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-
-        jButton7.setText("CUSTOMER MANAGE");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                btnCancelActionPerformed(evt);
             }
         });
 
@@ -190,28 +175,19 @@ public class CancelBookingView extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(btnCheckIn)
-                                        .addComponent(btnCheckOut)
-                                        .addComponent(jButton4)
-                                        .addComponent(btnRoom)
-                                        .addComponent(jButton6)
-                                        .addComponent(jButton7))
-                                .addContainerGap()));
+                                        .addComponent(btnRoomBooking)
+                                        .addComponent(btnRoomsCategory)
+                                        .addComponent(btnCancel))
+                                .addGap(17, 17, 17)));
         jPanel2Layout.setVerticalGroup(
                 jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addComponent(btnCheckIn)
+                                .addGap(106, 106, 106)
+                                .addComponent(btnRoomBooking)
                                 .addGap(18, 18, 18)
-                                .addComponent(btnCheckOut)
+                                .addComponent(btnRoomsCategory)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton4)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnRoom)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton6)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton7)
+                                .addComponent(btnCancel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
                                         javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnBack)
@@ -537,31 +513,22 @@ public class CancelBookingView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton6ActionPerformed
-        new CancelBookingView().setVisible(true);
-        this.dispose();
-    }// GEN-LAST:event_jButton6ActionPerformed
+    protected void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {
 
-    private void btnCheckInActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnCheckInActionPerformed
-        new CheckInView().setVisible(true);
-        this.dispose();
-    }// GEN-LAST:event_btnCheckInActionPerformed
+    }
 
-    private void btnCheckOutActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnCheckOutActionPerformed
-    }// GEN-LAST:event_btnCheckOutActionPerformed
-
-    private void btnRoomActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnRoomActionPerformed
-        new ManageRoomView().setVisible(true);
+    protected void btnRoomsCategoryActionPerformed(java.awt.event.ActionEvent evt) {
+        new CustomerRoomCategoryView(username).setVisible(true);
         this.dispose();
-    }// GEN-LAST:event_btnRoomActionPerformed
+    }
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton4ActionPerformed
-        new RoomCategoriesView().setVisible(true);
+    protected void btnRoomBookingActionPerformed(java.awt.event.ActionEvent evt) {
+        new CustomerRoomBookingView(username).setVisible(true);
         this.dispose();
-    }// GEN-LAST:event_jButton4ActionPerformed
+    }
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnBackActionPerformed
-        new AdminHomeView().setVisible(true);
+        new CustomerHomeView(username).setVisible(true);
         this.dispose();
     }// GEN-LAST:event_btnBackActionPerformed
 
@@ -572,11 +539,6 @@ public class CancelBookingView extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
         cancelBooking();
     }// GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton7ActionPerformed
-        new CustomerView().setVisible(true);
-        this.dispose();
-    }// GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -600,43 +562,42 @@ public class CancelBookingView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CancelBookingView.class.getName()).log(
+            java.util.logging.Logger.getLogger(CustomerCancelBookingView.class.getName()).log(
                     java.util.logging.Level.SEVERE, null,
                     ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CancelBookingView.class.getName()).log(
+            java.util.logging.Logger.getLogger(CustomerCancelBookingView.class.getName()).log(
                     java.util.logging.Level.SEVERE, null,
                     ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CancelBookingView.class.getName()).log(
+            java.util.logging.Logger.getLogger(CustomerCancelBookingView.class.getName()).log(
                     java.util.logging.Level.SEVERE, null,
                     ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CancelBookingView.class.getName()).log(
+            java.util.logging.Logger.getLogger(CustomerCancelBookingView.class.getName()).log(
                     java.util.logging.Level.SEVERE, null,
                     ex);
         }
+        // </editor-fold>
+        // </editor-fold>
         // </editor-fold>
         // </editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CancelBookingView().setVisible(true);
+                new CustomerCancelBookingView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnCheckIn;
-    private javax.swing.JButton btnCheckOut;
-    private javax.swing.JButton btnRoom;
+    private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnRoomBooking;
+    private javax.swing.JButton btnRoomsCategory;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -697,7 +658,7 @@ public class CancelBookingView extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Customer Not Found");
             }
         } catch (Exception ex) {
-            Logger.getLogger(CancelBookingView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CustomerCancelBookingView.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -732,7 +693,7 @@ public class CancelBookingView extends javax.swing.JFrame {
             }
 
         } catch (Exception ex) {
-            Logger.getLogger(CancelBookingView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CustomerCancelBookingView.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
 

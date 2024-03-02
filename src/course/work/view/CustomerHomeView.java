@@ -134,7 +134,7 @@ public class CustomerHomeView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRoomBookingActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnRoomBookingActionPerformed
-        new CustomerRoomCategoryView().setVisible(true);
+        new CustomerRoomCategoryView(username).setVisible(true);
         this.dispose();
     }// GEN-LAST:event_btnRoomBookingActionPerformed
 
@@ -145,7 +145,7 @@ public class CustomerHomeView extends javax.swing.JFrame {
     }// GEN-LAST:event_btnRoomsActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnCancelActionPerformed
-        new CancelBookingView().setVisible(true);
+        new CustomerCancelBookingView(username).setVisible(true);
         this.dispose();
     }// GEN-LAST:event_btnCancelActionPerformed
 
