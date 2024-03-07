@@ -4,7 +4,21 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/view/CustomerCancelBookingView.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/service/custom/impl/ReservationServiceImpl.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/view/CheckOutView.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/controller/CustomerController.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/entity/CustomerEntity.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/view/CustomerRoomCategoryView.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/dto/CustomerDto.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/service/custom/impl/CustomerServiceImpl.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/controller/RoomCategoryController.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/view/ManageRoomView.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/view/RoomCategoriesView.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/view/SignUpView.java</file>
             <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/view/CustomerRoomBookingView.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/view/CustomerView.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/view/CheckInView.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/Hotel%20Management%20System/src/course/work/dto/RoomCategoryDto.java</file>
         </group>
     </open-files>
 </project-private>

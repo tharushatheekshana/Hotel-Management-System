@@ -39,6 +39,8 @@ public class UserAccountRepositoryImpl implements UserAccountRepository {
         return entity;
     }
 
+    
+
     @Override
     public List<UserAccountEntity> getAll(Session session) throws Exception {
         return null;

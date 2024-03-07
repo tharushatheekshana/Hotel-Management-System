@@ -27,7 +27,6 @@ public class ReservationServiceImpl implements ReservationService {
     // private ReservationRepository reservationRepository = (ReservationRepository)
     // RepositoryFactory.getInstance()
     // .getRepository(RepositoryFactory.RepositoryType.RESERVATION);
-
     private SessionFactoryConfiguration sessionFactoryConfiguration = SessionFactoryConfiguration.getInstance();
     private CustomerRepository customerRepository = (CustomerRepository) RepositoryFactory.getInstance()
             .getRepository(RepositoryFactory.RepositoryType.CUSTOMER);
@@ -42,7 +41,7 @@ public class ReservationServiceImpl implements ReservationService {
         Transaction transaction = session.beginTransaction();
 
         try {
-           
+
             ReservationEntity reservationEntity = new ReservationEntity();
             reservationEntity.setRoom(dto.getRoom());
             reservationEntity.setDate(dto.getDate());
@@ -57,7 +56,8 @@ public class ReservationServiceImpl implements ReservationService {
                             dto.getRoom(), customerDto.getName(), customerDto.getPhone(),
                             customerDto.getEmail(),
                             customerDto.getAddress(), customerDto.getCity(), customerDto.getNationality(),
-                            customerDto.getIdNo(), customerDto.getCustomerPackage(), customerDto.getCheckInDate(),
+                            customerDto.getIdNo(), customerDto.getRoomType(), customerDto.getCustomerPackage(),
+                            customerDto.getCheckInDate(),
                             customerDto.getCheckOutDate(), customerDto.getCheckInTime(), customerDto.getCheckOutTime());
 
                     if (session.save(customerEntity) == null) {
@@ -95,9 +95,7 @@ public class ReservationServiceImpl implements ReservationService {
                 return "Reservation Save Error";
             }
 
-        } catch (
-
-        Exception e) {
+        } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
             }

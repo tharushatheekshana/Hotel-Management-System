@@ -18,7 +18,6 @@ import lombok.ToString;
  *
  * @author ASUS
  */
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -34,6 +33,7 @@ public class CustomerDto {
     private String city;
     private String nationality;
     private Integer idNo;
+    private String roomType;
     private String customerPackage;
     private java.sql.Date checkInDate;
     private java.sql.Date checkOutDate;

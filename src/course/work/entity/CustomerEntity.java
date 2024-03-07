@@ -50,6 +50,9 @@ public class CustomerEntity {
     @Column(name = "ID", nullable = false)
     private Integer idNo;
 
+    @Column(name = "RoomType", nullable = false)
+    private String roomType;
+
     @Column(name = "Package", nullable = false)
     private String customerPackage;
 

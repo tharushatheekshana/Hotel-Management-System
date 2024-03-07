@@ -99,7 +99,7 @@ public class AdminHomeView extends javax.swing.JFrame {
         btnRoomBooking.setBackground(new java.awt.Color(204, 255, 204));
         btnRoomBooking.setForeground(new java.awt.Color(0, 0, 0));
         btnRoomBooking.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-room-64.png"))); // NOI18N
-        btnRoomBooking.setText("ROOM CATEGORIES");
+        btnRoomBooking.setText("ROOM CATEGORIES & Packages");
         btnRoomBooking.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRoomBookingActionPerformed(evt);

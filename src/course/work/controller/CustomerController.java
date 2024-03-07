@@ -21,10 +21,6 @@ public class CustomerController {
         return customerService.addCustomer(customerDto);
     }
 
-    /* public String updateCustomer(CustomerDto customerDto) throws Exception {
-        return customerService.updateCustomer(customerDto);
-    }
-     */
     public String deleteCustomer(Integer id) throws Exception {
         return customerService.deleteCustomer(id);
     }
@@ -33,10 +29,11 @@ public class CustomerController {
         return customerService.getCustomer(id);
     }
 
-//    public List<CustomerDto> getAllCustomer() throws Exception {
-//        return customerService.getAll();
-//    }
-    public String updateCustomer(CustomerDto dto)throws Exception{
+    public List<CustomerDto> getAll() throws Exception {
+        return customerService.getAll();
+    }
+
+    public String updateCustomer(CustomerDto dto) throws Exception {
         return customerService.updateCustomer(dto);
     }
 }

@@ -34,6 +34,7 @@ public class ReservationEntity {
     @Column(name = "ReservationId")
     private Integer id;
 
+    @Id
     @Column(name = "Room", nullable = false)
     private Integer room;
 

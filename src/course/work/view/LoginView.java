@@ -246,10 +246,10 @@ public class LoginView extends javax.swing.JFrame {
                 new AdminHomeView().setVisible(true);
                 this.dispose();
             } else {
-                System.out.println("Wrong Password");
+                JOptionPane.showMessageDialog(this, "Wrong Password");
             }
         } else {
-            System.out.println("Wrong Username");
+            JOptionPane.showMessageDialog(this, "Wrong Username");
         }
     }
 

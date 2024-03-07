@@ -1103,6 +1103,7 @@ public class CustomerRoomBookingView extends javax.swing.JFrame {
                                         txtCity.getText(),
                                         txtNationality.getText(),
                                         Integer.parseInt(txtIDNo.getText()),
+                                        txtRoomType.getText(),
                                         txtRoomPackage.getText(),
                                         CheckInDate,
                                         CheckOutDate,
@@ -1113,6 +1114,7 @@ public class CustomerRoomBookingView extends javax.swing.JFrame {
 
                         String resp = reservationController.reservation(dto);
                         JOptionPane.showMessageDialog(this, resp);
+                        clear();
                 } catch (Exception ex) {
                         Logger.getLogger(CheckInView.class.getName()).log(Level.SEVERE, null, ex);
                         JOptionPane.showMessageDialog(this, ex.getMessage());
@@ -1193,6 +1195,20 @@ public class CustomerRoomBookingView extends javax.swing.JFrame {
                         Logger.getLogger(CustomerRoomBookingView.class.getName()).log(Level.SEVERE, "Error in load()",
                                         ex);
                 }
+        }
+
+        public void clear() {
+                txtRoom.setText("");
+                txtAddress.setText("");
+                txtCity.setText("");
+                txtIDNo.setText("");
+                txtRoomType.setText("");
+                txtRoomPackage.setText("");
+                CheckInDate = null;
+                CheckOutDate = null;
+                txtCheckInTime.setText("");
+                txtCheckOutTime.setText("");
+                txtPrice.setText("");
         }
 
 }

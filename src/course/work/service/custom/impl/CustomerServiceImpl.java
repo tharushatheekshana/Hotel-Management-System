@@ -98,7 +98,7 @@ public class CustomerServiceImpl implements CustomerService {
             if (entity != null) {
                 return new CustomerDto(entity.getRoom(), entity.getName(), entity.getPhone(),
                         entity.getEmail(), entity.getAddress(), entity.getCity(),
-                        entity.getNationality(), entity.getIdNo(), entity.getCustomerPackage(), entity.getCheckInDate(),
+                        entity.getNationality(), entity.getIdNo(), entity.getRoomType(), entity.getCustomerPackage(), entity.getCheckInDate(),
                         entity.getCheckOutDate(), entity.getCheckInTime(), entity.getCheckOutTime());
             }
             return null;
@@ -119,7 +119,7 @@ public class CustomerServiceImpl implements CustomerService {
             for (CustomerEntity entity : customerEntities) {
                 customerDtos.add(new CustomerDto(entity.getRoom(), entity.getName(), entity.getPhone(),
                         entity.getEmail(), entity.getAddress(), entity.getCity(),
-                        entity.getNationality(), entity.getIdNo(), entity.getCustomerPackage(), entity.getCheckInDate(),
+                        entity.getNationality(), entity.getIdNo(), entity.getRoomType(), entity.getCustomerPackage(), entity.getCheckInDate(),
                         entity.getCheckOutDate(), entity.getCheckInTime(), entity.getCheckOutTime()));
             }
             return customerDtos;
