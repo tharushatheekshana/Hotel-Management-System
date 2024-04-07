@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package course.work.entity;
 
 import javax.persistence.Column;
@@ -16,10 +12,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-/**
- *
- * @author ASUS
- */
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -34,7 +26,6 @@ public class ReservationEntity {
     @Column(name = "ReservationId")
     private Integer id;
 
-    @Id
     @Column(name = "Room", nullable = false)
     private Integer room;
 
@@ -43,6 +34,4 @@ public class ReservationEntity {
 
     @Column(name = "Price", nullable = false)
     private Double price;
-
-
 }
